@@ -1,0 +1,102 @@
+.project__main {
+  background-color: #402a41;
+  color: white;
+  .project__wrapper {
+    width: 90%;
+    margin: 0 auto;
+    .website {
+      .title {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 3rem 0;
+        font-weight: bolder;
+        font-size: 2.5rem;
+      }
+      .card__wrapper {
+        padding: 1rem 0;
+        .row {
+          display: grid;
+          grid-template-columns: auto auto;
+          gap: 5rem;
+          .card {
+            background: linear-gradient(
+              100.55deg,
+              #402b42 -2.14%,
+              #694c69 102.18%
+            );
+            border-radius: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .image {
+              flex: 1;
+            }
+            .card_content {
+              flex: 1;
+              padding: 1.5rem;
+              h3 {
+                color: #ffb822;
+                padding: 0.75rem 0;
+              }
+              p {
+                line-height: 1.8;
+              }
+            }
+          }
+          .card__reverse {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+      .more {
+        padding: 2rem 0;
+        color: #ffb822;
+        p {
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+    .logo {
+      .title {
+        text-align: center;
+        margin-bottom: 4rem;
+        font-size: 2.5rem;
+        padding: 3rem 0;
+        font-weight: bolder;
+      }
+      .card__wrapper {
+        .row {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          gap: 5rem;
+          .card {
+            background: linear-gradient(
+              100.55deg,
+              #402b42 -2.14%,
+              #694c69 102.18%
+            );
+            border-radius: 20px;
+            padding: 1rem;
+            display: grid;
+            place-content: center;
+            // .image {
+            //   //   height: 200px;
+            //   height: 100%;
+            //   max-width: 50%;
+            //   //   object-fit: fill;
+            // }
+          }
+        }
+      }
+      .more {
+        padding: 2rem 0;
+        color: #ffb822;
+        p {
+          float: right;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,837 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,100;1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mrs+Sheppards&display=swap");
+.project__main {
+  background-color: #402a41;
+  color: white;
+}
+
+.project__main .project__wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.project__main .project__wrapper .website .title {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
+
+.project__main .project__wrapper .website .card__wrapper {
+  padding: 1rem 0;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 5rem;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card {
+  background: linear-gradient(100.55deg, #402b42 -2.14%, #694c69 102.18%);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card .image {
+  flex: 1;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card .card_content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card .card_content h3 {
+  color: #ffb822;
+  padding: 0.75rem 0;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card .card_content p {
+  line-height: 1.8;
+}
+
+.project__main .project__wrapper .website .card__wrapper .row .card__reverse {
+  flex-direction: row-reverse;
+}
+
+.project__main .project__wrapper .website .more {
+  padding: 2rem 0;
+  color: #ffb822;
+}
+
+.project__main .project__wrapper .website .more p {
+  float: right;
+  cursor: pointer;
+}
+
+.project__main .project__wrapper .logo .title {
+  text-align: center;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  padding: 3rem 0;
+  font-weight: bolder;
+}
+
+.project__main .project__wrapper .logo .card__wrapper .row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5rem;
+}
+
+.project__main .project__wrapper .logo .card__wrapper .row .card {
+  background: linear-gradient(100.55deg, #402b42 -2.14%, #694c69 102.18%);
+  border-radius: 20px;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+}
+
+.project__main .project__wrapper .logo .more {
+  padding: 2rem 0;
+  color: #ffb822;
+}
+
+.project__main .project__wrapper .logo .more p {
+  float: right;
+  cursor: pointer;
+}
+
+:root {
+  --primaryColor: #ffb822;
+  --mainWhite: #fff;
+  --mainBlack: #393838;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Poppins";
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.main__section_container {
+  padding-top: 15rem;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main__section_container .left__vector {
+  margin-bottom: -5rem;
+}
+
+.main__section_container .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__section_container .hero .hero__image {
+  width: 10rem;
+  height: 10rem;
+  margin-left: -3rem;
+}
+
+.main__section_container .hero .hero__button {
+  background-color: var(--mainBlack);
+  color: white;
+  padding: 0.3rem 5rem;
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+}
+
+.main__section_container .hero .hero__button h3 {
+  font-family: "Mrs Sheppards", cursive;
+  font-size: 5rem;
+  font-weight: lighter;
+}
+
+.main__section_container .hero .hero__container {
+  position: relative;
+}
+
+.main__section_container .hero .hero__container::after {
+  content: "";
+  position: absolute;
+  border: 8px solid var(--primaryColor);
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 20%;
+  width: 90%;
+  height: 70%;
+  z-index: -1;
+}
+
+.main__section_container .hero .tag__name {
+  text-align: center;
+  padding: 3rem 3rem 3rem 10rem;
+  margin: 1rem;
+}
+
+.main__section_container .hero .tag__name h1 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+}
+
+.main__section_container .hero .more__action {
+  text-align: center;
+}
+
+.main__section_container .right__vector {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5rem;
+  padding: 0 5rem 0 0;
+}
+
+.main__section .circle_wrapper {
+  background-color: var(--primaryColor);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.header .navbar {
+  display: flex;
+  align-items: center;
+  padding: 7rem 20px 20px 20px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header nav {
+  flex: 1;
+  text-align: right;
+}
+
+.header nav ul {
+  /* display: inline-block; */
+  list-style-type: none;
+}
+
+.header nav ul li {
+  display: inline-block;
+  margin-right: 60px;
+}
+
+.header nav ul li a {
+  color: black;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.header .header__contents {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header .header__contents .hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: -20%;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+
+.header .header__contents .hero .hero__button {
+  background-color: var(--mainBlack);
+  color: white;
+  padding: 0.3rem 3rem;
+  width: max-content;
+  position: relative;
+  z-index: 15;
+}
+
+.header .header__contents .hero .hero__button h3 {
+  font-family: "Mrs Sheppards", cursive;
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.header .header__contents .hero .hero__container {
+  position: relative;
+}
+
+.header .header__contents .hero .hero__container::after {
+  content: "";
+  position: absolute;
+  border: 5px solid #fd3b2f;
+  top: 50%;
+  left: 10%;
+  width: 50%;
+  height: 70%;
+  z-index: -1;
+}
+
+.header .header__contents .hero .tag__name {
+  padding: 3rem 3rem 3rem 10rem;
+  margin: 1rem;
+}
+
+.header .header__contents .hero .tag__name h1 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+.header .header__contents .hero .more__action {
+  text-align: center;
+}
+
+.header .header__contents .right__vector {
+  height: 100%;
+}
+
+.header .col-2 {
+  flex-basis: 50%;
+  min-width: 300px;
+}
+
+.header .col-2 img {
+  max-width: 100%;
+  padding: 50px 0;
+}
+
+.header .col-2 h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+}
+
+.header .btn {
+  display: inline-block;
+  background-color: red;
+  color: black;
+  padding: 8px 30px;
+  margin: 30px 0;
+  /* border-radius: 40px; */
+}
+
+.header .btn:hover {
+  background-color: brown;
+  transition: 0.5s ease;
+}
+
+.header .hero {
+  text-align: center;
+  padding: 4rem 0;
+  color: black;
+}
+
+.header .hero h1 {
+  font-size: 3.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+
+.header .hero p {
+  color: black;
+}
+
+.about {
+  height: 100vh;
+  display: grid;
+}
+
+.about .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about .row .about__contents {
+  flex-basis: 40%;
+}
+
+.about .row .about__contents .title__container {
+  text-align: center;
+  margin: 0 0 10rem 0;
+}
+
+.about .row .about__contents .title__container .about__title {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.about .row .about__contents .title__container .about__title .hero__button {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+}
+
+.about .row .about__contents .title__container .about__title .hero__button h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.2rem 2.5rem;
+  background-color: white;
+}
+
+.about .row .about__contents .title__container .about__title::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #133c9a;
+  top: 50%;
+  left: 30%;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+}
+
+.about .row .about__contents p {
+  color: #505050;
+  line-height: 1.8rem;
+  margin: 1rem 0;
+}
+
+.about .row .right__vector {
+  flex-basis: 40%;
+  width: 90%;
+  height: 90%;
+}
+
+.service {
+  text-align: center;
+}
+
+.service a {
+  color: #505050;
+}
+
+.service .title__container {
+  text-align: center;
+}
+
+.service .title__container .service__title {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.service .title__container .service__title .hero__button {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+}
+
+.service .title__container .service__title .hero__button h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.2rem 2.5rem;
+  background-color: white;
+}
+
+.service .title__container .service__title::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #ffb822;
+  top: 50%;
+  left: 30%;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+}
+
+.service .container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+}
+
+.service .container .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.service .container .row .card {
+  box-shadow: rgba(0, 0, 0, 0.199) -3px -3px 8px 3px;
+  padding: 3rem;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.service .container .row .card .image {
+  flex: 1;
+  height: 120px;
+}
+
+.service .container .row .card .card_content {
+  flex: 2;
+}
+
+.service .container .row .card:hover {
+  transform: translateY(-5px);
+}
+
+.service .container .row .card_middle {
+  margin-top: -200px;
+}
+
+.service .container .row .about__contents {
+  flex-basis: 40%;
+}
+
+.service .container .row .about__contents .about__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.service .container .row .about__contents p {
+  color: #505050;
+  line-height: 1.8rem;
+  margin: 1rem 0;
+}
+
+.service .container .row .right__vector {
+  flex-basis: 40%;
+  width: 90%;
+  height: 90%;
+}
+
+.skills {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.skills .title__container {
+  text-align: center;
+}
+
+.skills .title__container .skill__title {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.skills .title__container .skill__title .hero__button {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+}
+
+.skills .title__container .skill__title .hero__button h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.2rem 2.5rem;
+  background-color: white;
+}
+
+.skills .title__container .skill__title::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #ffb822;
+  top: 50%;
+  left: 30%;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+}
+
+.skills .skill {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10rem;
+  padding: 8rem 0;
+}
+
+.skills .skill h3 {
+  font-weight: 400;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.skills .skill1,
+.skills .skill li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  list-style-type: none;
+}
+
+.skills .bar {
+  background-color: #c4c4c4;
+  display: block;
+  height: 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  width: 50%;
+  /* overflow: hidden; */
+  /* box-shadow: 0 0 10px #2187e7b3; */
+}
+
+.skills .bar span {
+  margin-top: -2px;
+  float: left;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #ffb822;
+}
+
+.skills .illustrator {
+  width: 80%;
+  animation: illustrator 2s;
+}
+
+.skills .figma {
+  width: 80%;
+  animation: figma 2s;
+}
+
+.skills .photoshop {
+  width: 60%;
+  animation: photoshop 2s;
+}
+
+.skills .xd {
+  width: 55%;
+  animation: xd 2s;
+}
+
+.skills .indesign {
+  width: 40%;
+  animation: indesign 2s;
+}
+
+.knowledges {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.knowledges .title__container {
+  text-align: center;
+}
+
+.knowledges .title__container .knowledge__title {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.knowledges .title__container .knowledge__title .hero__button {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+}
+
+.knowledges .title__container .knowledge__title .hero__button h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.2rem 2.5rem;
+  background-color: white;
+}
+
+.knowledges .title__container .knowledge__title::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #ffb822;
+  top: 50%;
+  left: 30%;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+}
+
+.knowledges .knowledge {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10rem;
+  padding: 8rem 0;
+}
+
+.knowledges .knowledge h3 {
+  font-weight: 400;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+.knowledges .knowledge1,
+.knowledges .knowledge li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 30px 0;
+  list-style-type: none;
+}
+
+.knowledges .bar {
+  background-color: #c4c4c4;
+  display: block;
+  height: 8px;
+  border: 1px solid #c4c4c4;
+  border-radius: 3px;
+  width: 50%;
+}
+
+.knowledges .bar span {
+  margin-top: -2px;
+  float: left;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #ffb822;
+}
+
+.knowledges .html {
+  width: 45%;
+  animation: html 2s;
+}
+
+.knowledges .javascript {
+  width: 20%;
+  animation: javascript 2s;
+}
+
+.knowledges .css {
+  width: 35%;
+  animation: css 2s;
+}
+
+.contact {
+  height: 100vh;
+  display: grid;
+}
+
+.contact .row {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+.contact .row .contact__contents {
+  flex-basis: 40%;
+}
+
+.contact .row .contact__contents .title__container {
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+.contact .row .contact__contents .title__container .contact__title {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.contact .row .contact__contents .title__container .contact__title .hero__button {
+  border-radius: 1rem;
+  position: relative;
+  z-index: 15;
+  display: inline-block;
+}
+
+.contact .row .contact__contents .title__container .contact__title .hero__button h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  padding: 0.2rem 2.5rem;
+  background-color: white;
+}
+
+.contact .row .contact__contents .title__container .contact__title::after {
+  content: "";
+  position: absolute;
+  border: 6px solid #ffb822;
+  top: 50%;
+  left: 30%;
+  width: 80%;
+  height: 50%;
+  z-index: -1;
+}
+
+.contact .row .contact__contents .contact__content .list {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 1rem;
+}
+
+.contact .row .contact__contents .contact__content .list .icon {
+  font-size: 1.6rem;
+  color: #df9a07;
+}
+
+.contact .row .contact__contents .contact__content .list .list_item {
+  color: #505050;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.contact .row .right__vector {
+  flex-basis: 50%;
+  width: 100%;
+  height: 90%;
+}
+
+.footer {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.footer .hero__container {
+  position: relative;
+}
+
+.footer .hero__container .hero__button {
+  background-color: var(--mainBlack);
+  color: white;
+  padding: 0.3rem 3rem;
+  position: relative;
+  z-index: 15;
+}
+
+.footer .hero__container .hero__button h3 {
+  font-family: "Mrs Sheppards", cursive;
+  font-size: 4rem;
+  font-weight: lighter;
+}
+
+.footer .hero__container::after {
+  content: "";
+  position: absolute;
+  border: 8px solid var(--primaryColor);
+  border-radius: 0.5rem;
+  top: 50%;
+  left: 20%;
+  width: 90%;
+  height: 70%;
+  z-index: -1;
+}
+/*# sourceMappingURL=style.css.map */
