@@ -11,6 +11,165 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <style>
+      *,
+      *::after,
+      *::before {
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        min-height: 100vh;
+        position: relative;
+      }
+
+      .my__info-box {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .my__info-box .my__image {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        outline: 4px solid #ffb822;
+        outline-offset: 2px;
+        margin-left: -25px;
+      }
+
+      .my__info-box .my__image img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .text__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text__info .my__name {
+        background: #393838;
+        padding: 4px 16px;
+        font-size: 50px;
+        border-radius: 5px;
+        color: #fff;
+        position: relative;
+      }
+
+      .text__info .my__name::before,
+      .text__info .my__name::after {
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: inherit;
+        border-radius: inherit;
+        font-weight: lighter;
+      }
+
+      .text__info .my__name::before {
+        content: "Ritesh Phuyal";
+        z-index: 2;
+        background: #393838;
+        font-family: "Mrs Sheppards", cursive;
+      }
+
+      .text__info .my__name::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        width: 100%;
+        height: 85%;
+        outline: 4px solid #ffb822;
+        z-index: 1;
+        background: transparent;
+        border-radius: 2px;
+      }
+
+      .text__info strong {
+        font-size: 34px;
+        display: block;
+        position: relative;
+        left: 50px;
+        top: 50px;
+        font-weight: 200;
+      }
+
+      .left__img {
+        width: 350px;
+        position: absolute;
+        bottom: -20%;
+      }
+
+      .left__img img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .right__img {
+        position: absolute;
+        right: 3.5%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .right__img img {
+        width: 150px;
+      }
+
+      .right__img img:last-child {
+        margin-top: 50px;
+        width: 250px;
+      }
+
+      @keyframes scrollUpDown {
+        0% {
+          transform: translateY(5px) scale(1.1);
+        }
+        100% {
+          transform: translateY(-5px) scale(1);
+        }
+      }
+
+      .scroll__down {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        cursor: pointer;
+      }
+
+      .scroll__down img {
+        width: 100%;
+        display: block;
+        /* transition: all 0.3s; */
+      }
+
+      .scroll__down:hover img {
+        animation: scrollUpDown 0.5s infinite alternate ease;
+      }
+    </style>
   </head>
 
   <body>
@@ -18,40 +177,28 @@
     <main>
       <section class="main__section">
         <div class="wrapper">
-          <div class="container">
-            <div class="main__section_container">
-              <div class="left__vector">
-                <img src="./images/main_left_vector.png" alt="" />
+          <header>
+            <div class="left__img">
+              <img src="./images/Group 6.png" alt="" />
+            </div>
+            <div class="my__info-box">
+              <div class="my__image">
+                <img src="./images/me.png" alt="" />
               </div>
-              <div class="hero">
-                <div>
-                  <div class="hero__image">
-                    <img src="./images/ritesh_main.png" alt="" />
-                  </div>
-                  <div class="hero__container">
-                    <div class="hero__button">
-                      <h3>Ritesh Phuyal</h3>
-                    </div>
-                  </div>
-                  <div class="tag__name">
-                    <h1>UI/UX Designer</h1>
-                  </div>
-                </div>
-
-                <div class="more__action">
-                  <span class="circle_wrapper"><a href="#home">More</a></span>
-                </div>
-              </div>
-              <div class="right__vector">
-                <div class="ui_vector">
-                  <img src="./images/UI.png" alt="" />
-                </div>
-                <div class="ux_vector">
-                  <img src="./images/UX.png" alt="" />
-                </div>
+              <div class="text__info">
+                <h4 class="my__name">Ritesh Phuyal</h4>
+                <strong class="my__rol">UI/UX Designer</strong>
               </div>
             </div>
-          </div>
+            <div class="right__img">
+              <img src="./images/UI.png" alt="" />
+              <img src="./images/UX.png" alt="" />
+            </div>
+            <!-- scroll down -->
+            <button class="scroll__down">
+              <img src="./images/Component 2.png" alt="" />
+            </button>
+          </header>
         </div>
       </section>
 
@@ -345,6 +492,21 @@
       var loader = document.getElementById("preloader");
       window.addEventListener("load", function () {
         loader.style.display = "none";
+      });
+    </script>
+    <script defer>
+      const scrollButton = document.querySelector(".scroll__down");
+      const scrollToSection = document.querySelector("#home");
+
+      scrollButton.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        console.log({ scrollButton, scrollToSection });
+        scrollToSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+          // inline: "nearest",
+        });
       });
     </script>
   </body>
