@@ -118,7 +118,7 @@ a {
     display: flex;
     align-items: center;
     padding: 7rem 20px 20px 20px;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: auto;
   }
   nav {
@@ -370,6 +370,13 @@ a {
       }
       .card_middle {
         margin-top: -200px;
+        .title {
+          color: #df9a07;
+          padding-bottom: 1rem;
+        }
+        .link {
+          text-decoration: underline;
+        }
       }
       .about__contents {
         flex-basis: 40%;

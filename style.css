@@ -235,7 +235,7 @@ a {
   display: flex;
   align-items: center;
   padding: 7rem 20px 20px 20px;
-  max-width: 1300px;
+  max-width: 1200px;
   margin: auto;
 }
 
@@ -513,6 +513,15 @@ a {
 
 .service .container .row .card_middle {
   margin-top: -200px;
+}
+
+.service .container .row .card_middle .title {
+  color: #df9a07;
+  padding-bottom: 1rem;
+}
+
+.service .container .row .card_middle .link {
+  text-decoration: underline;
 }
 
 .service .container .row .about__contents {
