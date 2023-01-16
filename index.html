@@ -158,6 +158,7 @@
         transform: translateX(-50%);
         width: 50px;
         cursor: pointer;
+        animation: scrollUpDown 0.5s infinite alternate ease;
       }
 
       .scroll__down img {
@@ -174,6 +175,15 @@
 
   <body>
     <div id="preloader"></div>
+    <div class="floating_menu" id="floating_menu">
+      <ul id="float_menu">
+        <li><a href="#home" class="submenu">Home</a></li>
+        <li><a href="#about" class="submenu active">About</a></li>
+        <li><a href="#service" class="submenu">Service</a></li>
+        <li><a href="#skill" class="submenu">Skill</a></li>
+        <li><a href="#contact" class="submenu">Contact</a></li>
+      </ul>
+    </div>
     <main>
       <section class="main__section">
         <div class="wrapper">
@@ -210,11 +220,11 @@
             </div>
             <nav>
               <ul id="MenuItems">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#service">Service</a></li>
-                <li><a href="#skill">Skill</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="submenu active">Home</a></li>
+                <li><a href="#about" class="submenu">About</a></li>
+                <li><a href="#service" class="submenu">Service</a></li>
+                <li><a href="#skill" class="submenu">Skill</a></li>
+                <li><a href="#contact" class="submenu">Contact</a></li>
               </ul>
             </nav>
 
@@ -270,6 +280,7 @@
 
       <div class="about" id="about">
         <div class="container"></div>
+
         <div class="row">
           <div class="about__contents">
             <div>
@@ -308,48 +319,50 @@
       </div>
 
       <div class="service" id="service">
-        <div class="title__container">
-          <div class="service__title">
-            <div class="hero__button">
-              <h3>SERVICES</h3>
+        <div class="grid_wrapper">
+          <div class="title__container">
+            <div class="service__title">
+              <div class="hero__button">
+                <h3>SERVICES</h3>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="card__wrapper">
-            <div class="row">
-              <a href="./project.html">
-                <div class="card">
-                  <div class="image">
-                    <img src="./images/image 3.png" alt="" />
+          <div class="container">
+            <div class="card__wrapper">
+              <div class="row">
+                <a href="./project.html">
+                  <div class="card">
+                    <div class="image">
+                      <img src="./images/image 3.png" alt="" />
+                    </div>
+                    <div class="card_content">
+                      <p>College/Shool</p>
+                      <p>Banner Design</p>
+                    </div>
                   </div>
-                  <div class="card_content">
-                    <p>College/Shool</p>
-                    <p>Banner Design</p>
+                </a>
+                <a href="./project.html">
+                  <div class="card card_middle">
+                    <div class="image">
+                      <img src="./images/image2.png" alt="" />
+                    </div>
+                    <div class="card_content">
+                      <p class="title">UI / UX Designing</p>
+                      <p class="link">View Projects</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="./project.html">
-                <div class="card card_middle">
-                  <div class="image">
-                    <img src="./images/image2.png" alt="" />
+                </a>
+                <a href="./project.html">
+                  <div class="card">
+                    <div class="image">
+                      <img src="./images/image3.png" alt="" />
+                    </div>
+                    <div class="card_content">
+                      <p>Creative Design</p>
+                    </div>
                   </div>
-                  <div class="card_content">
-                    <p class="title">UI / UX Designing</p>
-                    <p class="link">View Projects</p>
-                  </div>
-                </div>
-              </a>
-              <a href="./project.html">
-                <div class="card">
-                  <div class="image">
-                    <img src="./images/image3.png" alt="" />
-                  </div>
-                  <div class="card_content">
-                    <p>Creative Design</p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -486,6 +499,13 @@
           MenuItems.style.maxHeight = "0px";
         }
       }
+      window.onscroll = function () {
+        if (window.scrollY > window.innerHeight) {
+          document.getElementById("floating_menu").style.opacity = "1";
+        } else {
+          document.getElementById("floating_menu").style.opacity = "0";
+        }
+      };
     </script>
 
     <script>

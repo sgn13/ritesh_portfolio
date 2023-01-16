@@ -32,6 +32,69 @@ a {
   text-decoration: none;
   color: white;
 }
+.floating_menu {
+  position: fixed;
+  right: 0;
+  bottom: 5%;
+
+  ul {
+    /* display: inline-block; */
+    list-style-type: none;
+  }
+  ul li {
+    display: inline-block;
+    margin-right: 30px;
+  }
+  ul li .submenu {
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    opacity: 0.3;
+    cursor: pointer;
+    z-index: 1000;
+    transition: 0.5s ease;
+    border: 1px solid black;
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  nav {
+    flex: 1;
+    text-align: right;
+  }
+  nav ul {
+    /* display: inline-block; */
+    list-style-type: none;
+  }
+  nav ul li {
+    display: inline-block;
+    margin-right: 60px;
+  }
+  nav ul li .submenu {
+    color: black;
+    font-weight: 500;
+    font-size: 1.2rem;
+    &.active {
+      background-image: url("./images/submenuImage.png");
+      // background-color: red;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 35px;
+      /* transform: scale(-0.5); */
+      margin: -20px;
+      color: white;
+    }
+  }
+}
 
 .main__section {
   &_container {
@@ -133,10 +196,21 @@ a {
     display: inline-block;
     margin-right: 60px;
   }
-  nav ul li a {
+  nav ul li .submenu {
     color: black;
     font-weight: 500;
     font-size: 1.2rem;
+    &.active {
+      background-image: url("./images/submenuImage.png");
+      // background-color: red;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 35px;
+      /* transform: scale(-0.5); */
+      margin: -20px;
+      color: white;
+    }
   }
   .header__contents {
     // height: 100vh;
@@ -240,7 +314,7 @@ a {
 
 .about {
   height: 100vh;
-  display: grid;
+  // display: grid;
   .row {
     display: flex;
     align-items: center;
@@ -302,99 +376,106 @@ a {
 
 .service {
   text-align: center;
+  height: 100vh;
   a {
     color: #505050;
   }
-  .title__container {
-    text-align: center;
-    .service__title {
+  .grid_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20rem;
+    .title__container {
       text-align: center;
-      font-size: 2rem;
-      position: relative;
-      display: inline-block;
-
-      .hero__button {
-        border-radius: 1rem;
+      .service__title {
+        text-align: center;
+        font-size: 2rem;
         position: relative;
-        z-index: 15;
         display: inline-block;
 
-        h3 {
-          font-size: 3rem;
-          font-weight: 600;
-          padding: 0.2rem 2.5rem;
-          background-color: white;
-        }
-      }
+        .hero__button {
+          border-radius: 1rem;
+          position: relative;
+          z-index: 15;
+          display: inline-block;
 
-      &::after {
-        content: "";
-        position: absolute;
-        border: 6px solid #ffb822;
-        top: 50%;
-        left: 30%;
-        width: 80%;
-        height: 50%;
-        z-index: -1;
+          h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            padding: 0.2rem 2.5rem;
+            background-color: white;
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          border: 6px solid #ffb822;
+          top: 50%;
+          left: 30%;
+          width: 80%;
+          height: 50%;
+          z-index: -1;
+        }
       }
     }
-  }
-  .container {
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    .row {
-      display: flex;
+    .container {
+      // height: 100vh;
+      display: grid;
       align-items: center;
-      // flex-wrap: wrap;
-      justify-content: space-around;
-      .card {
-        box-shadow: rgba(0, 0, 0, 0.199) -3px -3px 8px 3px;
-        padding: 3rem;
-        width: 500px;
+      .row {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        transition: 0.5s ease;
-        .image {
-          flex: 1;
-          height: 120px;
+        // flex-wrap: wrap;
+        justify-content: space-around;
+        .card {
+          box-shadow: rgba(0, 0, 0, 0.199) -3px -3px 8px 3px;
+          padding: 3rem;
+          max-width: 500px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          transition: 0.5s ease;
+          .image {
+            flex: 1;
+            height: 120px;
+          }
+          .card_content {
+            flex: 2;
+          }
+          &:hover {
+            transform: translateY(-5px);
+          }
         }
-        .card_content {
-          flex: 2;
+        .card_middle {
+          margin-top: -200px;
+          .title {
+            color: #df9a07;
+            padding-bottom: 1rem;
+          }
+          .link {
+            text-decoration: underline;
+          }
         }
-        &:hover {
-          transform: translateY(-5px);
+        .about__contents {
+          flex-basis: 40%;
+          .about__title {
+            text-align: center;
+            font-size: 2rem;
+          }
+          p {
+            color: #505050;
+            line-height: 1.8rem;
+            margin: 1rem 0;
+          }
         }
-      }
-      .card_middle {
-        margin-top: -200px;
-        .title {
-          color: #df9a07;
-          padding-bottom: 1rem;
-        }
-        .link {
-          text-decoration: underline;
-        }
-      }
-      .about__contents {
-        flex-basis: 40%;
-        .about__title {
-          text-align: center;
-          font-size: 2rem;
-        }
-        p {
-          color: #505050;
-          line-height: 1.8rem;
-          margin: 1rem 0;
-        }
-      }
 
-      .right__vector {
-        flex-basis: 40%;
-        width: 90%;
-        height: 90%;
+        .right__vector {
+          flex-basis: 40%;
+          width: 90%;
+          height: 90%;
+        }
       }
     }
   }
